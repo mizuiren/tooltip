@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tooltip</title>
+</head>
+<body>
+	<a id="qiuye-shang" style="position:fixed;left:300px;top:200px;display: block;">鼠标悬浮上面显示提示</a>
+	<a id="qiuye-xia" style="position:fixed;left:550px;top:200px;display: block;">下面显示提示</a>
+	<a id="qiuye-zuo" style="position:fixed;left:300px;top:400px;display: block;">点击我我就会在左边显示</a>
+	<a id="qiuye-you" style="position:fixed;left:550px;top:400px;display: block;">我会在右边显示</a>
+	<a id="qiuye-noevent" style="position:fixed;left:550px;top:600px;display: block;">没有事件直接显示</a>
+	<script src="http://resource.mizuiren.com/jquery.js"></script>
+	<script src="js/tooltip.js"></script>
+	<script>
+		$("#qiuye-shang").tooltip({
+			position: "top",
+			content: '{<br>'+
+				'position: "top",<br>'+
+				'content: "......",<br>'+
+				'background: "#3c4751",<br>'+
+				'event: "hover",<br>'+
+				'color: "yellow"<br>'+
+			'}',
+			background: "#3c4751",
+			event: "hover",
+			color: "yellow"
+		});
+		$("#qiuye-xia").tooltip({
+			position: "bottom",
+			content: '{<br>'+
+				'position: "bottom",<br>'+
+				'content: "......",<br>'+
+				'event:"hover"<br>'+
+			'}',
+			event:"hover"
+		});
+		$("#qiuye-zuo").tooltip({
+			position: "left",
+			content: '{<br>'+
+				'position: "left",<br>'+
+				'content: "我是左先生你是谁？",<br>'+
+				'background:"#fdfdfd",<br>'+
+				'event:"click",<br>'+
+				'borderColor:"red"<br>'+
+			'}',
+			background:"#fdfdfd",
+			event:"click",
+			borderColor:"red"
+		});
+		$("#qiuye-you").tooltip({
+			position: "right",
+			content: '{<br>'+
+				'position: "right",<br>'+
+				'content: "我是右先生耶！",<br>'+
+				'background:"pink",<br>'+
+				'event:"hover"<br>'+
+			'}',
+			background:"pink",
+			event:"hover"
+		});
+		$("#qiuye-noevent").tooltip({
+			position: "top",
+			content: '{<br>'+
+				'position: "top",<br>'+
+				'content: "没有事件直接显示",<br>'+
+				'background:"#fdfdfd",<br>'+
+				'borderColor:"red"<br>'+
+			'}',
+			background:"#fdfdfd",
+			borderColor:"red"
+		});
+	</script>
+</body>
+</html>
